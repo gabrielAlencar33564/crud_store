@@ -121,8 +121,8 @@ com esses três comandos será possivel criar as imagens das entidades do banco 
 
 ```json
 {
-  ...
+  "..."
   "status": "INACTIVE",
-  ...
+  "..."
 }
 ```
