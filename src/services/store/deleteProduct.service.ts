@@ -2,7 +2,7 @@ import AppDataSource from "../../data-source";
 import Store from "../../entities/store.entitie";
 import AppError from "../../errors/appError";
 
-const listProductsService = async (productId: string): Promise<string> => {
+const deleteProductsService = async (productId: string): Promise<string> => {
   const storeRepository = AppDataSource.getRepository(Store);
   const product = await storeRepository.findOneBy({ id: productId });
 
@@ -10,7 +10,11 @@ const listProductsService = async (productId: string): Promise<string> => {
     throw new AppError("Product is not found", 404);
   }
 
+  await storeRepository.update(productId, {
+    status: "INACTIVE",
+  });
+
   return "Deleted product";
 };
 
-export default listProductsService;
+export default deleteProductsService;
