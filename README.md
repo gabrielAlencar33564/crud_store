@@ -28,7 +28,7 @@ com esses três comandos será possivel criar as imagens das entidades do banco 
 
 
 <h2 align ='center'> Funcionamento da api: </h2>
-`post(https://localhost:3000/products)
+`post(https://localhost:3000/products)`
 
 `REQUEST`
 ```json
