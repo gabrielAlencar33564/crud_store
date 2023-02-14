@@ -17,3 +17,8 @@ export interface IProductRequestUpdate {
   category?: string;
   quantity?: number;
 }
+
+export interface ICategoryResponse {
+  id: string;
+  name: string;
+}
