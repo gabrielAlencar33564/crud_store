@@ -28,7 +28,7 @@ com esses três comandos será possivel criar as imagens das entidades do banco 
 
 
 <h2 align ='center'> Funcionamento da api: </h2>
-##post(https://localhost:3000/products) - POST
+`post(https://localhost:3000/products)
 
 `REQUEST`
 ```json
@@ -53,7 +53,7 @@ com esses três comandos será possivel criar as imagens das entidades do banco 
 }
 ```
 
-##get(https://localhost:3000/products) - GET
+`get(https://localhost:3000/products)`
 
 `RESPONSE`
 ```json
@@ -74,7 +74,7 @@ com esses três comandos será possivel criar as imagens das entidades do banco 
 ]
 ```
 
-##get(https://localhost:3000/products/:id) - GET
+`get(https://localhost:3000/products/:id)`
 
 `RESPONSE`
 ```json
@@ -93,7 +93,7 @@ com esses três comandos será possivel criar as imagens das entidades do banco 
 }
 ```
 
-##patch(https://localhost:3000/products/:id) - PATCH
+`patch(https://localhost:3000/products/:id)`
 
 `REQUEST`
 ```json
@@ -117,7 +117,7 @@ com esses três comandos será possivel criar as imagens das entidades do banco 
 }
 ```
 
-##delete(https://localhost:3000/products/:id) - DELETE
+`delete(https://localhost:3000/products/:id)`
 
 ```json
 {
