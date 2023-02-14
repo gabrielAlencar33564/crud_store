@@ -27,7 +27,7 @@ com esses três comandos será possivel criar as imagens das entidades do banco 
 7 - Rode o comando `yarn dev`, que irá abrir o servidor local para se utilizar da api. 
 
 
-##Funcionamento da api:
+##Funcionamento da api
 ###post(https://localhost:3000/products) - POST
 
 `REQUEST`
