@@ -3,7 +3,7 @@ Esse projeto é um crud simples de clientes, tais quais poderão cadastrar, atua
 
 Para seu desenvolvimento, foi utilizado a linguagem `Typescript` com seu poderoso framework `Node.js com o Express`.
 
-##Rodando a aplicação localmente:
+<h2 align ='center'> Rodando a aplicação localmente: </h2>
 ### Primeiramente...
 1 - Copie a chave SSH clicando no botão "Code" logo acima.
 2 - Após ter feito a copia da chave SSH, abra seu terminal e digite o comando: `git clone` (ainda não aperte enter), mais o clone da "chave SSH".
@@ -27,8 +27,8 @@ com esses três comandos será possivel criar as imagens das entidades do banco 
 7 - Rode o comando `yarn dev`, que irá abrir o servidor local para se utilizar da api. 
 
 
-##Funcionamento da api
-###post(https://localhost:3000/products) - POST
+<h2 align ='center'> Funcionamento da api: </h2>
+##post(https://localhost:3000/products) - POST
 
 `REQUEST`
 ```json
@@ -53,7 +53,7 @@ com esses três comandos será possivel criar as imagens das entidades do banco 
 }
 ```
 
-###get(https://localhost:3000/products) - GET
+##get(https://localhost:3000/products) - GET
 
 `RESPONSE`
 ```json
@@ -74,7 +74,7 @@ com esses três comandos será possivel criar as imagens das entidades do banco 
 ]
 ```
 
-###get(https://localhost:3000/products/:id) - GET
+##get(https://localhost:3000/products/:id) - GET
 
 `RESPONSE`
 ```json
@@ -93,7 +93,7 @@ com esses três comandos será possivel criar as imagens das entidades do banco 
 }
 ```
 
-###patch(https://localhost:3000/products/:id) - PATCH
+##patch(https://localhost:3000/products/:id) - PATCH
 
 `REQUEST`
 ```json
@@ -117,7 +117,7 @@ com esses três comandos será possivel criar as imagens das entidades do banco 
 }
 ```
 
-###delete(https://localhost:3000/products/:id) - DELETE
+##delete(https://localhost:3000/products/:id) - DELETE
 
 ```json
 {
