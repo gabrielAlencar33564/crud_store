@@ -3,9 +3,12 @@ import {
   CreateDateColumn,
   DeleteDateColumn,
   Entity,
+  JoinColumn,
+  ManyToOne,
   PrimaryGeneratedColumn,
   UpdateDateColumn,
 } from "typeorm";
+import Category from "./category.entitie";
 
 @Entity("store")
 class Store {
@@ -15,8 +18,9 @@ class Store {
   @Column()
   name: string;
 
-  @Column()
-  category: string;
+  @ManyToOne(() => Category, { eager: true })
+  @JoinColumn()
+  category: Category;
 
   @Column({ default: "ACTIVE" })
   status: string;
