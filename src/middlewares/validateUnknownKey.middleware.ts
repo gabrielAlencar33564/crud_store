@@ -1,9 +1,8 @@
 import { Request, Response, NextFunction } from "express";
-import { IProductRequest } from "../interfaces/store/index";
 
 const validateUnknownKeyMiddleware =
   (serializer: any) => async (req: Request, res: Response, next: NextFunction) => {
-    const data: IProductRequest = req.body;
+    const data = req.body;
     const datakeys: string[] = Object.keys(data);
     const validKeys: string[] = serializer["_nodes"];
 

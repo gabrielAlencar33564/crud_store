@@ -1,14 +1,14 @@
 import AppDataSource from "../../data-source";
 import Category from "../../entities/category.entitie";
 import Store from "../../entities/store.entitie";
-import {
-  IProductRequest,
-  IProductRequestUpdate,
-  IProductResponse,
-} from "../../interfaces/store/index";
 import AppError from "../../errors/appError";
+import createCategoryService from "../category/createCategory.service";
+import { IProductRequestUpdate, IProductResponse } from "../../interfaces/store/index";
 
-const updateProductService = async (data: IProductRequestUpdate, productId: string) => {
+const updateProductService = async (
+  data: IProductRequestUpdate,
+  productId: string
+): Promise<IProductResponse> => {
   const storeRepository = AppDataSource.getRepository(Store);
 
   const product = await storeRepository.findOneBy({ id: productId });
@@ -16,11 +16,9 @@ const updateProductService = async (data: IProductRequestUpdate, productId: stri
     throw new AppError("Product is not found", 404);
   }
 
-  const categoryRepository = AppDataSource.getRepository(Category);
-
   let category = product.category;
   if (data.category) {
-    category = (await categoryRepository.findOneBy({ name: data.category })) as Category;
+    category = (await createCategoryService(data.category)) as Category;
 
     if (!category) {
       throw new AppError("Category is not found", 404);
@@ -35,7 +33,7 @@ const updateProductService = async (data: IProductRequestUpdate, productId: stri
 
   const updateProduct = await storeRepository.findOneBy({ id: productId });
 
-  return { ...updateProduct, category: updateProduct!.category.name };
+  return { ...updateProduct, category: updateProduct!.category.name } as IProductResponse;
 };
 
 export default updateProductService;
