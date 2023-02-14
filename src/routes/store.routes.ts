@@ -4,6 +4,7 @@ import {
   listProductController,
   listProductsController,
   deleteProductController,
+  updateProductController,
 } from "../controllers/store/index";
 
 const storeRouter = Router();
@@ -11,7 +12,7 @@ const storeRouter = Router();
 storeRouter.post("", createProductController);
 storeRouter.get("/:id", listProductController);
 storeRouter.get("", listProductsController);
-storeRouter.patch("/:id");
+storeRouter.patch("/:id", updateProductController);
 storeRouter.delete("/:id", deleteProductController);
 
 export default storeRouter;
