@@ -6,10 +6,16 @@ import {
   deleteProductController,
   updateProductController,
 } from "../controllers/store/index";
+import validadeSerializerMiddleware from "../middlewares/validateSerializer.middleware";
+import { createProductSerializer } from "../serializers/store.serializer";
 
 const storeRouter = Router();
 
-storeRouter.post("", createProductController);
+storeRouter.post(
+  "",
+  validadeSerializerMiddleware(createProductSerializer),
+  createProductController
+);
 storeRouter.get("/:id", listProductController);
 storeRouter.get("", listProductsController);
 storeRouter.patch("/:id", updateProductController);
