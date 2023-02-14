@@ -37,6 +37,7 @@ com esses três comandos será possivel criar as imagens das entidades do banco 
   "category": "Roupas",
   "quantity": 100
 }
+```
 
 `RESPONSE`
 ```json
@@ -50,6 +51,7 @@ com esses três comandos será possivel criar as imagens das entidades do banco 
 	"created_at": "2023-02-14T20:27:57.590Z",
 	"updated_at": "2023-02-14T20:27:57.590Z"
 }
+```
 
 ###get(https://localhost:3000/products) - GET
 
@@ -70,6 +72,7 @@ com esses três comandos será possivel criar as imagens das entidades do banco 
 		}
 	}
 ]
+```
 
 ###get(https://localhost:3000/products/:id) - GET
 
@@ -88,6 +91,7 @@ com esses três comandos será possivel criar as imagens das entidades do banco 
 		"name": "teste"
 	}
 }
+```
 
 ###patch(https://localhost:3000/products/:id) - PATCH
 
@@ -97,6 +101,7 @@ com esses três comandos será possivel criar as imagens das entidades do banco 
 	"name": "Brinco",
 	"category": "Acessórios"
 }
+```
 
 `RESPONSE`
 ```json
@@ -110,6 +115,7 @@ com esses três comandos será possivel criar as imagens das entidades do banco 
 	"deleted_at": "0000-00-00T00:00:00.0000",
 	"category": "Acessórios"
 }
+```
 
 ###delete(https://localhost:3000/products/:id) - DELETE
 
@@ -119,3 +125,4 @@ com esses três comandos será possivel criar as imagens das entidades do banco 
   "status": "INACTIVE",
   ...
 }
+```
