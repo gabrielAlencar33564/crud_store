@@ -2,7 +2,7 @@ import { Request, Response } from "express";
 import { IProductRequest } from "../../interfaces/store/index";
 import createProductService from "../../services/store/createProduct.service";
 import listProductService from "../../services/store/listProduct.service";
-// import updateProductService from "../../services/store/updateProduct.service";
+import updateProductService from "../../services/store/updateProduct.service";
 import deleteProductsService from "../../services/store/deleteProduct.service";
 import listProductsService from "../../services/store/listProducts.service";
 
@@ -25,13 +25,13 @@ export const listProductController = async (req: Request, res: Response) => {
   return res.status(200).json(Products);
 };
 
-// export const updateProductController = async (req: Request, res: Response) => {
-//   const id = req.params.id;
-//   const data = req.body;
-//   const Product = await updateProductService(data, id);
+export const updateProductController = async (req: Request, res: Response) => {
+  const id = req.params.id;
+  const data = req.body;
+  const Product = await updateProductService(data, id);
 
-//   return res.status(200).json(Product);
-// };
+  return res.status(200).json(Product);
+};
 
 export const deleteProductController = async (req: Request, res: Response) => {
   const id = req.params.id;
