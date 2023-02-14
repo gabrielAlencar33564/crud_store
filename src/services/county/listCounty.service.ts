@@ -5,8 +5,7 @@ import AppError from "../../errors/appError";
 import { ICounty } from "../../interfaces/county";
 
 const listCountyService = async (data: string): Promise<ICounty> => {
-  const name = data.replace(/_/g, " ");
-  console.log(name);
+  const name = data.replace(/_/g, " ").replace(/-/g, " ");
 
   const countyRepository = AppDataSource.getRepository(County);
 
