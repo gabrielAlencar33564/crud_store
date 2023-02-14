@@ -20,22 +20,22 @@ export const listProductsController = async (req: Request, res: Response) => {
 
 export const listProductController = async (req: Request, res: Response) => {
   const id = req.params.id;
-  const Products = await listProductService(id);
+  const products = await listProductService(id);
 
-  return res.status(200).json(Products);
+  return res.status(200).json(products);
 };
 
 export const updateProductController = async (req: Request, res: Response) => {
   const id = req.params.id;
   const data = req.body;
-  const Product = await updateProductService(data, id);
+  const product = await updateProductService(data, id);
 
-  return res.status(200).json(Product);
+  return res.status(200).json(product);
 };
 
 export const deleteProductController = async (req: Request, res: Response) => {
   const id = req.params.id;
-  const Product = await deleteProductsService(id);
+  const product = await deleteProductsService(id);
 
-  return res.status(204).json(Product);
+  return res.status(204).json({ message: product });
 };
