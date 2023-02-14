@@ -12,6 +12,7 @@ const deleteProductsService = async (productId: string): Promise<string> => {
 
   await storeRepository.update(productId, {
     status: "INACTIVE",
+    deleted_at: new Date().toISOString(),
   });
 
   return "Deleted product";

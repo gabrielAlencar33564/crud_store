@@ -9,7 +9,7 @@ export interface IProductResponse extends IProductRequest {
   status: string;
   created_at: Date;
   updated_at: Date;
-  deleted_at: Date;
+  deleted_at: Date | string;
 }
 
 export interface IProductRequestUpdate {

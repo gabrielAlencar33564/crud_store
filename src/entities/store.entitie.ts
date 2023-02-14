@@ -1,7 +1,6 @@
 import {
   Column,
   CreateDateColumn,
-  DeleteDateColumn,
   Entity,
   JoinColumn,
   ManyToOne,
@@ -34,8 +33,8 @@ class Store {
   @UpdateDateColumn()
   updated_at: Date;
 
-  @DeleteDateColumn()
-  deleted_at: Date;
+  @Column({ nullable: true, default: "0000-00-00T00:00:00.0000" })
+  deleted_at: string;
 }
 
 export default Store;
