@@ -8,7 +8,7 @@ const createProductService = async (data: IProductRequest): Promise<IProductResp
   const storeRepository = AppDataSource.getRepository(Store);
 
   let category = await categoryRepository.findOneBy({ name: data.category });
-  if (category) {
+  if (!category) {
     category = categoryRepository.create({
       name: data.category,
     });
